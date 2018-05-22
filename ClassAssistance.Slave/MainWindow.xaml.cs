@@ -31,7 +31,7 @@ namespace ClassAssistance.Slave
             {
                 MaliciousManager.Instance.Initialize();
                 mServer = MasterServer.Instance;
-                mServer.Connect("tcp://10.9.0.149:5556");
+                mServer.Connect("tcp://127.0.0.1:5556");
 
                 Kernel32.SetConsoleCtrlHandler(ctrl =>
                 {
