@@ -37,7 +37,7 @@ namespace ClassAssistance.Slave
         private Task a;
 
         /// <summary>
-        /// 
+        /// 服务端主服务
         /// </summary>
         public MasterServer()
         {
@@ -55,7 +55,7 @@ namespace ClassAssistance.Slave
         }
 
         /// <summary>
-        /// 
+        /// 连接服务端
         /// </summary>
         public void Connect(string serverAddress) 
         {
@@ -67,7 +67,7 @@ namespace ClassAssistance.Slave
         }
 
         /// <summary>
-        /// 
+        /// 发送第一条消息，包含自己的ip，主机名，用户名
         /// </summary>
         private void SendGreet()
         {

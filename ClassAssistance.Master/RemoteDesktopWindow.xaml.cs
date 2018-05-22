@@ -32,7 +32,7 @@ namespace ClassAssistance.Master
         }
 
         /// <summary>
-        /// 
+        /// 开始截屏
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
@@ -57,7 +57,7 @@ namespace ClassAssistance.Master
         });
 
         /// <summary>
-        /// 
+        /// 停止截屏
         /// </summary>
         private void StopCapture() => Send(new StopScreenCaptureMessage());
 

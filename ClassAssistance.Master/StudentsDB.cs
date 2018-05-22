@@ -6,6 +6,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.IO;
 
+
+//学生数据库相关
 namespace ClassAssistance.Master
 {
     class StudentsDB
@@ -16,6 +18,7 @@ namespace ClassAssistance.Master
             CreateStudentsDB();
         }
 
+        //创建学生数据库
         private void CreateStudentsDB()
         {
             if (File.Exists("Students.sqlite"))
@@ -31,6 +34,7 @@ namespace ClassAssistance.Master
             }
         }
 
+        //打开数据库
         private void OpenStudentsDB()
         {
             m_dbConnection = new SQLiteConnection("Data Source=Students.sqlite;Version=3;");
@@ -48,6 +52,7 @@ namespace ClassAssistance.Master
             return result;
         }
 
+        //关闭数据库
         public void CloseStudentsDB()
         {
             m_dbConnection.Close();

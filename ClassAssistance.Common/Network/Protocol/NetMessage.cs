@@ -3,6 +3,8 @@ using System.IO;
 using System.Linq;
 using ProtoBuf;
 
+
+//所有消息接口
 namespace ClassAssistance.Common.Network.Protocol
 {
 

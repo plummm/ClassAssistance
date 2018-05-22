@@ -28,12 +28,15 @@ namespace Deamon
             Monitor();
         }
 
+
+        //检查是否位于开机启动项
         private void CheckForStartup()
         {
             Startup startup = new Startup("Deamon.exe", Directory.GetCurrentDirectory());
             startup.Start();
         }
 
+        //检查ClassAssistance是否运行
         private bool CheckClassAssistance()
         {
             Process[] classAssistance = Process.GetProcessesByName("ClassAssistance.Slave");
@@ -47,6 +50,7 @@ namespace Deamon
             }
         }
 
+        //关机
         private static void ShutdownLocal()
         {
             //MessageBox.Show("Deamon Shutdown!");

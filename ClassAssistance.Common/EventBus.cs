@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 
+
+//事件相关
 namespace ClassAssistance.Common
 {
     /// <summary>

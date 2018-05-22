@@ -24,7 +24,7 @@ namespace ClassAssistance.Master
         }
 
         /// <summary>
-        /// 
+        /// 任务管理器窗口
         /// </summary>
         /// <param name="slave"></param>
         public TasksWindow(Slave slave)
@@ -58,6 +58,7 @@ namespace ClassAssistance.Master
             });
         }
 
+        //杀死进程
         private void KillProcess(object sender, RoutedEventArgs e)
         {
             if (TasksList.SelectedItem != null)

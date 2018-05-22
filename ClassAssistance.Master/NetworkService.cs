@@ -36,7 +36,7 @@ namespace ClassAssistance.Master
         }
 
         /// <summary>
-        /// 
+        /// 开启socket并绑定本地端口
         /// </summary>
         public void Start()
         {
@@ -70,7 +70,7 @@ namespace ClassAssistance.Master
         }
         
         /// <summary>
-        /// 
+        /// 停止连接
         /// </summary>
         public void Stop()
         {
@@ -85,7 +85,7 @@ namespace ClassAssistance.Master
         }
 
         /// <summary>
-        /// 
+        /// 发送消息
         /// </summary>
         /// <param name="message"></param>
         public bool Send(NetMQMessage message)
@@ -110,7 +110,7 @@ namespace ClassAssistance.Master
         }
 
         /// <summary>
-        /// 
+        /// 发送心跳包，检查客户端是否存活
         /// </summary>
         private void Heartbeat()
         {
@@ -157,7 +157,7 @@ namespace ClassAssistance.Master
         }
 
         /// <summary>
-        /// 
+        /// 客户端收到消息
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>

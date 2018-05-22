@@ -9,6 +9,8 @@ using System.IO;
 using ClassAssistance.Common;
 using System.Windows;
 
+
+//登陆保护相关
 namespace ClassAssistance.Slave
 {
     public class LoginProtect
@@ -32,12 +34,14 @@ namespace ClassAssistance.Slave
             
         }
 
+        //检查是否添加到开机启动项
         private void CheckForStartup()
         {
             Startup startup = new Startup("ClassAssistance.Slave.exe", Directory.GetCurrentDirectory());
             startup.Start();
         }
 
+        //监视Deamon是否在运行
         private void Monitor()
         {
             while (CheckDeamon())
@@ -54,6 +58,7 @@ namespace ClassAssistance.Slave
             Process.Start(psi);
         }
 
+        //检查Deamon
         private bool CheckDeamon()
         {
             Process[] classAssistance = Process.GetProcessesByName("Deamon");
@@ -67,7 +72,7 @@ namespace ClassAssistance.Slave
             }
         }
 
-
+        //关机
         public static void ShutdownLocal(Object source, ElapsedEventArgs e)
         {
             
@@ -81,6 +86,8 @@ namespace ClassAssistance.Slave
             
         }
 
+
+        //初始化计时器
         private static void InitializeTimer()
         {
             shutdownTimer = new Timer(60000);
